@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 function RegisterForm() {
   const [formValues, setFormValues] = useState({
     name: "",
@@ -7,13 +8,58 @@ function RegisterForm() {
     mobile: "",
     checkbox: false,
   });
+  const [errors, setErrors] = useState({
+    name: null,
+    username: null,
+    email: null,
+    mobile: null,
+    checkbox: null,
+  });
+
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
-    
   };
-
-  
-  
+  const navigate = useNavigate();
+  const handleSignUp = () => {
+    let isErrors = false;
+    if (formValues.name.trim().length === 0) {
+      // trim function removes whitespaces from start and end of string
+      setErrors((prev) => ({ ...prev, name: "Name is required" }));
+      isErrors = true;
+    } else {
+      setErrors((prev) => ({ ...prev, name: null }));
+    }
+    if (formValues.username.trim().length === 0) {
+      setErrors((prev) => ({ ...prev, username: "Username is required" }));
+      isErrors = true;       // if there is error
+    } else {
+      setErrors((prev) => ({ ...prev, username: null }));   // there is no error go for the further process
+    }
+    if (formValues.email.trim().length === 0) {
+      setErrors((prev) => ({ ...prev, email: "Email is required" }));
+      isErrors = true;
+    } else {
+      setErrors((prev) => ({ ...prev, email: null }));
+    }
+    if (formValues.mobile.trim().length === 0) {
+      setErrors((prev) => ({ ...prev, mobile: "Mobile is required" }));
+      isErrors = true;
+    } else {
+      setErrors((prev) => ({ ...prev, mobile: null }));
+    }
+    if (formValues.checkbox === false) {
+      setErrors((prev) => ({
+        ...prev,
+        checkbox: "Please accept the terms and conditions",
+      }));
+      isErrors = true;
+    } else {
+      setErrors((prev) => ({ ...prev, checkbox: null }));
+    }
+    if (!isErrors) {
+      navigate("/movies");
+    }
+  };
 
   return (
     <div className="main-container">
@@ -27,7 +73,7 @@ function RegisterForm() {
         <p className="heading">Super app</p>
         <p className="div2-line">Create your new account</p>
         <div className="form-section">
-          <form >
+          <div>
             <div className="form-section">
               <input
                 type="text"
@@ -37,6 +83,11 @@ function RegisterForm() {
                 value={formValues.name}
                 onChange={handleChange}
               />
+              {errors.name ? (
+                <p style={{ color: "red"}}>{errors.name}</p>
+              ) : (
+                <></>
+              )}
 
               <input
                 type="text"
@@ -46,6 +97,11 @@ function RegisterForm() {
                 value={formValues.username}
                 onChange={handleChange}
               />
+              {errors.username ? (
+                <p style={{ color: "red"}}>{errors.username}</p>
+              ) : (
+                <></>
+              )}
 
               <input
                 type="email"
@@ -55,6 +111,11 @@ function RegisterForm() {
                 value={formValues.email}
                 onChange={handleChange}
               />
+              {errors.email ? (
+                <p style={{ color: "red" }}>{errors.email}</p>
+              ) : (
+                <></>
+              )}
 
               <input
                 type="mobile"
@@ -65,6 +126,11 @@ function RegisterForm() {
                 onChange={handleChange}
               />
             </div>
+            {errors.mobile ? (
+              <p style={{ color: "red", justifyContent:"center" }}>{errors.mobile}</p>
+            ) : (
+              <></>
+            )}
 
             <div className="checkbox-section">
               <input
@@ -77,28 +143,34 @@ function RegisterForm() {
               />
 
               <label htmlFor="checkbox">
-            < p className="para">Share my registration data with Superapp</p>   
-         
+                <p className="para">Share my registration data with Superapp</p>
               </label>
+             
             </div>
-          
-            <button >SIGN UP</button>
-            
-          </form>
-          <div className="para1">
-            <p>By clicking on Sign up. you agree to Superapp <span>Terms and Conditions of Use</span></p>
+            {errors.checkbox ? (
+              <p style={{ color: "red", }}>{errors.checkbox}</p>
+            ) : (
+              <></>
+            )}
 
+            <button onClick={handleSignUp}>SIGN UP</button>
+          </div>
+          <div className="para1">
+            <p>
+              By clicking on Sign up. you agree to Superapp{" "}
+              <span>Terms and Conditions of Use</span>
+            </p>
           </div>
           <div className="para2">
-            <p>To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp <span>Privacy Policy</span></p>
+            <p>
+              To learn more about how Superapp collects, uses, shares and
+              protects your personal data please head Superapp{" "}
+              <span>Privacy Policy</span>
+            </p>
           </div>
-          
         </div>
       </div>
-     
     </div>
-    
-    
   );
 }
 export default RegisterForm;
