@@ -83,10 +83,22 @@ function RegisterForm() {
             </div>
           
             <button >SIGN UP</button>
+            
           </form>
+          <div className="para1">
+            <p>By clicking on Sign up. you agree to Superapp <span>Terms and Conditions of Use</span></p>
+
+          </div>
+          <div className="para2">
+            <p>To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp <span>Privacy Policy</span></p>
+          </div>
+          
         </div>
       </div>
+     
     </div>
+    
+    
   );
 }
 export default RegisterForm;

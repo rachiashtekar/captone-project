@@ -60,8 +60,8 @@
 
 .input-section {
   background: #292929;
-  width: 450px;
-  height: 57px;
+  width: 420px;
+  height: 50px;
   top: 312px;
   margin-top: 20px;
   border-radius: 3.82px;
@@ -85,12 +85,13 @@
   font-family: "DM Sans", sans-serif;
   font-size: 20px;
   position: relative;
+  left: 0px;
 
   justify-content: space-between;
 }
 .checkmark {
-  height: 19px;
-  width: 19px;
+  height: 15px;
+  width: 15px;
   background: #d9d9d9;
   cursor: pointer;
   position: relative;
@@ -102,8 +103,9 @@
   position: absolute;
   left: 40px;
   top: 10px;
-  /* color: #7c7c7c; */
-  color: white;
+  color: #7c7c7c;
+  font-size: 16px;
+
 }
 button {
   color: white;
@@ -111,11 +113,41 @@ button {
   top: 44px;
   background: #72db73;
   height: 40px;
-  width: 440px;
+  width: 400px;
   border-radius: 28px;
   border: none;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 25px;
+  font-weight: 500;
+  font-size: 20px;
   letter-spacing: 2%;
+  position: relative;
+  left: 15px;
+}
+
+.para1{
+  color: #7C7C7C;
+  
+  position: relative;
+  top: 70px;
+
+  height: 40px;
+  width: 400px;
+  font-family: "Roboto", sans-serif;
+font-size: 15px;
+
+}
+.para2{
+  color: #7C7C7C;
+  ;
+  position: relative;
+  top: 90px;
+
+  height: 50px;
+  width: 400px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+span{
+  color:  #72DB73;
+  
 }
