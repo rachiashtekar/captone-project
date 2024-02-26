@@ -24,7 +24,7 @@
   font-size: 55px;
   position: relative;
   margin-left: 20px;
-  top: 450px;
+  top: 470px;
 }
 
 .second-container {
@@ -35,8 +35,8 @@
 }
 .heading {
   font-family: "Single Day", sans-serif;
-  font-weight: 400;
-  font-size: 45px;
+  font-weight: 600;
+  font-size: 50px;
   /* line-height: 93.59px; */
   color: #72db73;
 
@@ -55,6 +55,8 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 34.92px;
+  position: relative;
+  top: 16px;
 }
 
 .form-section {
@@ -116,7 +118,7 @@
 button {
   color: white;
   position: absolute;
-  top: 30px;
+  top: 40px;
   background: #72db73;
   height: 40px;
   width: 400px;

@@ -84,7 +84,7 @@ function RegisterForm() {
                 onChange={handleChange}
               />
               {errors.name ? (
-                <p style={{ color: "red"}}>{errors.name}</p>
+                <p style={{ color: "red", }}>{errors.name}</p>
               ) : (
                 <></>
               )}
@@ -112,7 +112,7 @@ function RegisterForm() {
                 onChange={handleChange}
               />
               {errors.email ? (
-                <p style={{ color: "red" }}>{errors.email}</p>
+                <p style={{ color: "red",  }}>{errors.email}</p>
               ) : (
                 <></>
               )}
@@ -127,7 +127,7 @@ function RegisterForm() {
               />
             </div>
             {errors.mobile ? (
-              <p style={{ color: "red", justifyContent:"center" }}>{errors.mobile}</p>
+              <p style={{ color: "red", textAlign:"center" }}>{errors.mobile}</p>
             ) : (
               <></>
             )}
@@ -148,7 +148,7 @@ function RegisterForm() {
              
             </div>
             {errors.checkbox ? (
-              <p style={{ color: "red", }}>{errors.checkbox}</p>
+              <p style={{ color: "red", position: "absolute", top:"470px", left:"1030px" }}>{errors.checkbox}</p>
             ) : (
               <></>
             )}
