@@ -153,7 +153,7 @@ function RegisterForm() {
               <></>
             )}
 
-            <button onClick={handleSignUp}>SIGN UP</button>
+            <button className="btn" onClick={handleSignUp}>SIGN UP</button>
           </div>
           <div className="para1">
             <p>

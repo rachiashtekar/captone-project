@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Single+Day&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.container {
+  display: flex;
+  background-color: black;
+}
+
+.container1 {
+  /* border : 2px solid red; */
+  height: 700px;
+  width: 700px;
+}
+.container2 {
+  /* border : 2px solid red; */
+  height: 700px;
+  width: 900px;
+}
+
+.para-1 {
+  font-family: "Single Day", sans-serif;
+  color: green;
+  font-weight: 400;
+  font-size: 60px;
+  height: 70px;
+  width: 300px;
+  margin-top: 45px;
+  margin-left: 70px;
+}
+.para-2 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 68px;
+  height: 300px;
+  width: 500px;
+  margin-left: 80px;
+  margin-top: 34px;
+}
+.container2-1 {
+  color: white;
+  height: 150px;
+  width: 200px;
+  /* text-align: center; */
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+  font-family: DM sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+.btn2 {
+  color: white;
+  justify-content: center;
+  background: none;
+  border: none;
+  position: relative;
+  top: 14px;
+  left: 40px;
+  font-size: 15px;
+}
+.next-page-btn {
+  height: 50px;
+  width: 150px;
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 600px;
+  left: 1300px;
+  background-color: green;
+  color: white;
+  border-radius: 38px;
+}
