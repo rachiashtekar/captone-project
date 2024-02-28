@@ -8,6 +8,7 @@ import Romance from "../asset/Romance.png";
 import Thriller from "../asset/Thriller.png";
 import Western from "../asset/Western.png";
 import MovieBox from "../Components/MovieBox";
+import MovieChip from "../Components/MovieChip";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Pages/Movies.css";
@@ -72,18 +73,15 @@ const genres = [
 export default function Movies() {
   const [selected, setSelected] = useState([]);
   const navigate = useNavigate();
-  
-  const handleClick = () => {
 
+  const handleClick = () => {
     if (selected.length < 3) {
       // console.log("selected")
       return;
     } else {
       navigate("/display");
     }
-  
   };
-
 
   return (
     <div className="container">
@@ -92,15 +90,16 @@ export default function Movies() {
         <p className="para-2">Choose your entertainment category</p>
       </div>
 
-      <div className="container2" style={{display: "grid",gridTemplateColumns: "1fr 1fr 1fr ",gridTemplateRows: "0fr 0fr 0fr ",padding: "10px",}}>
-        
-       
-            
-            
-       
-          
-       
-         {genres.map((genres) => {
+      <div
+        className="container2"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr ",
+          gridTemplateRows: "0fr 0fr 0fr ",
+          padding: "10px",
+        }}
+      >
+        {genres.map((genres) => {
           return (
             <MovieBox
               key={genres}
@@ -112,10 +111,28 @@ export default function Movies() {
         })}
       </div>
 
-
-
+      <div
+        style={{
+          display: "flex",
+          marginTop: "12px",
+          marginBottom: "12px",
+          gap: "12px",
+        }}
+      >
+        {selected.map((item) => {
+          return (
+            <MovieChip
+              key={item}
+              data={item}
+              selected={selected}
+              setSelected={setSelected}
+            />
+          );
+        })}
+      </div>
 
       <div className="next-page-btn">
+        {selected.length < 3 ? <p>Minimum 3 categories required</p> : <></>}
         <button onClick={handleClick} className="btn2">
           Next page
         </button>
