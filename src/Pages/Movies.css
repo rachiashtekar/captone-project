@@ -14,7 +14,7 @@
 .container1 {
   /* border : 2px solid red; */
   height: 700px;
-  width: 700px;
+  width: 550px;
 }
 .container2 {
   /* border : 2px solid red; */
@@ -42,13 +42,12 @@
   margin-left: 80px;
   margin-top: 34px;
 }
-.container2-1 {
+.container2 {
   color: white;
-  height: 150px;
-  width: 200px;
+    height: 600px;
+    width: 700px;
   /* text-align: center; */
   align-items: center;
-
   display: flex;
   flex-direction: column;
   font-family: DM sans-serif;
@@ -69,12 +68,31 @@
 }
 .next-page-btn {
   height: 50px;
-  width: 150px;
+  width: 150px; 
   /* border: 2px solid red; */
+   position: absolute; 
+   background-color: green;
+   left: 1200px;
+   top: 600px;
+   border-radius: 28px;
+  
+}
+  
+.chip{
   position: absolute;
-  top: 600px;
-  left: 1300px;
-  background-color: green;
+  top: 500px;
+  left: 30px;
   color: white;
-  border-radius: 38px;
+  
+  /* border: 2px solid red;
+  box-sizing: border-box; */
+}
+.warning{
+  position: absolute;
+  left: 70px;
+   width: 400px;
+  height: 60px;
+  color: red;
+  /* border: 2px solid red; */
+  top: 600px;
 }

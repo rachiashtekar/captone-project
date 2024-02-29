@@ -1,7 +1,7 @@
 
 
 
-// -------------------imp information----------------------------------//
+# // -------------------imp information----------------------------------//
 #  command 1.  npm i react-router-dom
 import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 
@@ -13,4 +13,24 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
         <Route path="/browse" element={<Browse />} />
       </Routes>
     </BrowserRouter>
+
+  # ---------------------------------------------------------------------------------------------
+
+  #                          About MovieBox componenet
+
+  1 : export default function MovieBox({ data, selected, setSelected })
+
+   It is set to receive three props - data, selected, and setSelected - using destructuring assignment.
+   jsx   from the parent components which is movie.js
+
+
+2:    const isSelected = selected.includes(data.id);
+  This line declares a variable isSelected which is a boolean indicating whether the current genre (data.id) is present in the selected array.
+
+3: if (selected.includes(data.id)) 
+
+ : This condition checks if the current genre (data.id) is already present in the selected array. If it is, it means the genre is already selected.
+
+
+
 

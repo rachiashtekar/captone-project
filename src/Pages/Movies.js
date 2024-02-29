@@ -9,6 +9,7 @@ import Thriller from "../asset/Thriller.png";
 import Western from "../asset/Western.png";
 import MovieBox from "../Components/MovieBox";
 import MovieChip from "../Components/MovieChip";
+import Vector from "../asset/Vector.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Pages/Movies.css";
@@ -16,7 +17,7 @@ const genres = [
   {
     name: "Action",
     id: "action",
-    color: "#FF5209",
+    color: "#FF5209 ",
     image: <img style={{ width: "130px", height: "110px" }} src={Action} />,
   },
   {
@@ -97,6 +98,9 @@ export default function Movies() {
           gridTemplateColumns: "1fr 1fr 1fr ",
           gridTemplateRows: "0fr 0fr 0fr ",
           padding: "10px",
+          gap:"10px",
+          height:"120px",
+        
         }}
       >
         {genres.map((genres) => {
@@ -111,12 +115,14 @@ export default function Movies() {
         })}
       </div>
 
-      <div
+      <div className="chip"
         style={{
           display: "flex",
           marginTop: "12px",
           marginBottom: "12px",
           gap: "12px",
+         
+          
         }}
       >
         {selected.map((item) => {
@@ -131,12 +137,16 @@ export default function Movies() {
         })}
       </div>
 
+      <div className="warning">{selected.length < 3 ? <p> <img src="Vector.png"/>  Minimum 3 categories required</p> : <></>}</div> 
       <div className="next-page-btn">
-        {selected.length < 3 ? <p>Minimum 3 categories required</p> : <></>}
-        <button onClick={handleClick} className="btn2">
+       {/* <div className="warning">{selected.length < 3 ? <p>Minimum 3 categories required</p> : <></>}</div>  */}
+        <button  onClick={handleClick} className="btn2">
           Next page
         </button>
+
+        
       </div>
-    </div>
+
+     </div>
   );
 }
