@@ -8,7 +8,7 @@ export default function UserInfo() {
         
        
     
-        <p>{info.name}</p>
+        <p>{UserInfo.name}</p>
         <p>{info.username}</p>
         <p>{info.email}</p>
         {movies.map((item)=>{

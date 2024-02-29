@@ -33,8 +33,27 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
  #  ------------------About local storage---------------
 
- 1. The localStorage object is a type of web storage that allows you to store data with no expiration time.
+ 1. local Storage
+ 
+ The localStorage object is a type of web storage that allows you to store data with no expiration time.
 
+
+ 2. setItem Method:
+
+The setItem method is used to store data in the local storage.
+It takes two parameters: a key and a value.
+The key is a string that acts as an identifier for the data you want to store.
+The value is the data you want to store, and it must be a string.
+
+3. Json Stringify
+When storing complex data structures (e.g., arrays or objects), it's common to convert them to JSON strings using JSON.stringify.
+
+4. const info = JSON.parse(localStorage.getItem("userInfo"));
+
+This line retrieves the user information from local storage using the key "userInfo".
+localStorage.getItem("userInfo") retrieves the stored string value.
+
+5. JSON.parse is then used to parse the JSON string and convert it into a JavaScript object.
 
 
 
