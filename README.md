@@ -31,6 +31,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
  : This condition checks if the current genre (data.id) is already present in the selected array. If it is, it means the genre is already selected.
 
+ #  ------------------About local storage---------------
+
+ 1. The localStorage object is a type of web storage that allows you to store data with no expiration time.
+
 
 
 
