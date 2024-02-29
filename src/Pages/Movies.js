@@ -1,3 +1,4 @@
+import React from "react";
 import Action from "../asset/Action.png";
 import Drama from "../asset/Drama.png";
 import Fantasy from "../asset/Fantasy.png";
@@ -15,56 +16,56 @@ import { useNavigate } from "react-router-dom";
 import "../Pages/Movies.css";
 const genres = [
   {
-    name: "Action",
-    id: "action",
+    // name: "Action",
+    id: "Action",
     color: "#FF5209 ",
     image: <img style={{ width: "130px", height: "110px" }} src={Action} />,
   },
   {
-    name: "Drama",
+    // name: "Drama",
     id: "Drama",
     color: "#D7A4FF",
     image: <img style={{ width: "130px", height: "110px" }} src={Drama} />,
   },
   {
-    name: "Romance",
+    // name: "Romance",
     id: "Romance",
     color: "#11B800",
     image: <img style={{ width: "130px", height: "110px" }} src={Romance} />,
   },
   {
-    name: "Thriller",
+    // name: "Thriller",
     id: "Thriller",
     color: "#84C2FF",
     image: <img style={{ width: "130px", height: "110px" }} src={Thriller} />,
   },
 
   {
-    name: "Western",
+    // name: "Western",
     id: "Western",
     color: "#912500",
-    image: <img style={{ width: "130px", height: "110px" }} src={Western} />,
+    image: <img style={{ width: "140px", height: "110px" }} src={Western} />,
   },
   {
-    name: "Horror",
+    // name: "Horror",
     id: "Horror",
     color: "#7358FF",
     image: <img style={{ width: "130px", height: "110px" }} src={Horror} />,
   },
   {
-    name: "Fantasy",
+    // name: "Fantasy",
     id: "Fantasy",
     color: " #FF4ADE",
     image: <img style={{ width: "130px", height: "110px" }} src={Fantasy} />,
   },
   {
-    name: "Music",
+    // name: "Music",
     id: "Music",
     color: "#E61E32",
     image: <img style={{ width: "130px", height: "110px" }} src={Music} />,
   },
   {
-    name: "Fiction",
+    // name: "Fiction",
     id: "Fiction",
     color: "#6CD061",
     image: <img style={{ width: "130px", height: "110px" }} src={Fiction} />,
@@ -80,6 +81,7 @@ export default function Movies() {
       // console.log("selected")
       return;
     } else {
+      localStorage.setItem("movies",JSON.stringify(selected))
       navigate("/display");
     }
   };
@@ -95,9 +97,9 @@ export default function Movies() {
         className="container2"
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr ",
-          gridTemplateRows: "0fr 0fr 0fr ",
-          padding: "10px",
+          gridTemplateColumns: "0fr 0fr 0fr ",
+          gridTemplateRows: "1fr 1fr 1fr ",
+          // padding: "10px",
           gap:"10px",
           height:"120px",
         
@@ -120,7 +122,9 @@ export default function Movies() {
           display: "flex",
           marginTop: "12px",
           marginBottom: "12px",
-          gap: "12px",
+          gap: "10px",
+          width:"20vw",
+          flexWrap:"wrap"
          
           
         }}
@@ -137,7 +141,7 @@ export default function Movies() {
         })}
       </div>
 
-      <div className="warning">{selected.length < 3 ? <p> <img src="Vector.png"/>  Minimum 3 categories required</p> : <></>}</div> 
+      <div className="warning">{selected.length < 3 ? <p> <img className="vector-img" src={Vector}/>  Minimum 3 categories required</p> : <></>}</div> 
       <div className="next-page-btn">
        {/* <div className="warning">{selected.length < 3 ? <p>Minimum 3 categories required</p> : <></>}</div>  */}
         <button  onClick={handleClick} className="btn2">

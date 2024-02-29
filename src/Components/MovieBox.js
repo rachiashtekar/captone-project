@@ -15,8 +15,12 @@ export default function MovieBox({ data, selected, setSelected }) {
         style={{
           background: data.color,
           textAlign: "center",
-          width: "20vw",
+          width: "10vw",
           border: isSelected ? "5px solid green" : "",
+          borderRadius:"20px"
+       
+         
+        
         }}
       >
         <p>{data.id}</p>

@@ -14,7 +14,7 @@
 .container1 {
   /* border : 2px solid red; */
   height: 700px;
-  width: 550px;
+  width: 800px;
 }
 .container2 {
   /* border : 2px solid red; */
@@ -95,4 +95,8 @@
   color: red;
   /* border: 2px solid red; */
   top: 600px;
+}
+.vector-img{
+  height: 20px;
+  width: 20px;
 }

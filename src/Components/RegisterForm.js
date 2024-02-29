@@ -57,6 +57,7 @@ function RegisterForm() {
       setErrors((prev) => ({ ...prev, checkbox: null }));
     }
     if (!isErrors) {
+      localStorage.setItem("userInfo",JSON.stringify(formValues))
       navigate("/movies");
     }
   };
