@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Single+Day&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  background-color: black;
+}
+.div-1-1 {
+  height: 250px;
+  width: 600px;
+  /* border: 2px solid red; */
+  color: white;
+  background: #5746ea;
+  border-radius: 19px;
+  display: flex;
+}
+.div-1-1-1 {
+  height: 200px;
+  width: 300px;
+  /* border: 2px solid red; */
+  position: relative;
+  left: 80px;
+  margin-top: 10px;
+}
+.container-big-1 {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  margin-left: 20px;
+  background-color: black;
+}
+.div-1-2 {
+  height: 180px;
+  width: 600px;
+  border: 2px solid red;
+  position: relative;
+  top: 10px;
+}
+
+.container-two {
+  height: 430px;
+  width: 400px;
+  border: 2px solid red;
+  background: #f1c75b;
+  border-radius: 19px;
+  position: relative;
+  left: 20px;
+}
+
+.ProfileBig {
+  height: 250px;
+  width: 120px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.minsection {
+  height: 220px;
+  width: 1020px;
+  border: 2px solid red;
+  margin-left: 20px;
+  background: #1e2343;
+  border-radius: 19px;
+}
+.whetherinfo {
+  height: 650px;
+  width: 420px;
+  border: 2px solid red;
+  position: absolute;
+  left: 1080px;
+  top: 10px;
+  margin: 10px;
+  background-color: aqua;
+  border-radius: 19px;
+}
+.Name-1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  letter-spacing: 2%;
+}
+.Username-2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 41px;
+  letter-spacing: 2%;
+}
+.Email-3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  letter-spacing: 2%;
+}

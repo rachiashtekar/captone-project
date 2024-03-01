@@ -65,9 +65,9 @@ function RegisterForm() {
   return (
     <div className="main-container">
       <div className="first-container">
-        <div>
+        {/* <div> */}
           <p className="div1-para">Discover new things on Superapp</p>
-        </div>
+        {/* </div> */}
       </div>
 
       <div className="second-container">
