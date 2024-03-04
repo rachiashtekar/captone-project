@@ -6,10 +6,9 @@ export default function UserInfo() {
   const movies = JSON.parse(localStorage.getItem("movies"));
 
   return (
-    <div className="box">
-      <div className="container-big-1">
-        <div className="container-one">
-          <div className="div-1-1">
+    
+       <div className="container-one">
+       <div className="div-1-1">
             <div className="image-profilebig">
               <img className="ProfileBig" src={ProfileBig} />
             </div>
@@ -38,22 +37,12 @@ export default function UserInfo() {
                   </div>
                 );
               })}
+
             </div>
-          </div>
-          <div className="div-1-2">
-            <p>whether</p>
-          </div>
+            </div>
+          
         </div>
-        <div className="container-two">
-          <p>notes</p>
-        </div>
-      </div>
-      <div className="minsection">
-        <p>minutes</p>
-      </div>
-      <div className="whetherinfo">
-        <p>whetherinfo</p>
-      </div>
-    </div>
+        
   );
-}
+} 
+ 

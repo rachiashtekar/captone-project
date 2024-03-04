@@ -2,10 +2,10 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
-.box {
-  background-color: black;
-}
+
+
 .div-1-1 {
   height: 250px;
   width: 600px;
@@ -14,6 +14,8 @@
   background: #5746ea;
   border-radius: 19px;
   display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 .div-1-1-1 {
   height: 200px;
@@ -26,7 +28,7 @@
 .container-big-1 {
   display: flex;
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
   margin-left: 20px;
   background-color: black;
 }
@@ -82,7 +84,7 @@
 .Username-2 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 41px;
+  font-size: 30px;
   letter-spacing: 2%;
 }
 .Email-3 {

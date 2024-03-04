@@ -2,6 +2,7 @@
 import React from "react";
 // import "../Pages/Display.css";
 import UserInfo from "../Components/UserInfo";
+import Notes from "../Components/Notes"
 
 
 function Display() {
@@ -9,6 +10,7 @@ function Display() {
     <div>
      
       <UserInfo/>
+      <Notes/>
     </div>
   );
 }
