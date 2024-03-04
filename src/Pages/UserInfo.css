@@ -4,7 +4,9 @@
   padding: 0;
   
 }
-
+.container-one{
+  
+}
 
 .div-1-1 {
   height: 250px;
@@ -14,8 +16,9 @@
   background: #5746ea;
   border-radius: 19px;
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-left: 20px;
+  padding-top: 20px;
 }
 .div-1-1-1 {
   height: 200px;

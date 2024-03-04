@@ -8,7 +8,7 @@ function Notes(){
     }
     return (
         <div style={{background:"black"}}>
-        <div   style={{background : "#F1C75B", width:"400px,",height:"400px",padding:"16px",marginTop:"5px",position: 'absolute',left:"620px",top:"5px",borderRadius:"19px",marginTop:"20px",marginLeft:"20px"}} >
+        <div   style={{background : "#F1C75B", width:"400px,",height:"400px",padding:"16px",marginTop:"5px",position: 'absolute',left:"620px",top:"5px",borderRadius:"19px",marginLeft:"20px"}} >
             <h1>Notes</h1>
             <textarea
             onChange={handleChange}
