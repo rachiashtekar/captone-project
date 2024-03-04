@@ -3,6 +3,8 @@ import { useEffect } from "react";
 
 function Weather() {
   const [Weather, setWeather] = useState(null);
+  const [date,setDate]=useState((''))
+  const [time,setTime]=useState(0)
 
   useEffect(() => {
     fetch(
@@ -13,6 +15,20 @@ function Weather() {
       .catch((error) => console.log(error));
   }, []);
   console.log(Weather);
+//   useEffect(() => {
+//     const currentDate = new Date();
+//     const formattedDate = currentDate.toLocaleDateString();
+//     setDate(formattedDate);
+//   }, []);
+useEffect(() => {
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleDateString();
+    const formattedTime = currentDate.toLocaleTimeString();
+    setDate(formattedDate);
+    setTime(formattedTime);
+  }, []);
+  
+  
   return (
     <div
       style={{
@@ -26,11 +42,12 @@ function Weather() {
         borderRadius: "19PX",
       }}
     >
-      <div
-        style={{ height: "50px", width: "578px", background: "#FF4ADE",borderRadius:"33.43px 33.43px 0px 0px",
+      <div 
+        style={{ height: "50px", width: "578px", background: "#FF4ADE",borderRadius:"33.43px 33.43px 0px 0px",display:"flex",justifyContent: " space-between",
     }}
       >
-        <p>2-20-2023</p>
+        <p style={{marginLeft:"40px",marginTop:"15px",fontSize:"20px",fontWeight:"400"}}>{date}</p>
+        <p style={{marginRight:"50px",marginTop:"15px",fontSize:"20px",fontWeight:"400"}}>{time}</p>
       </div>
       <p>Weather</p>
       {/* {Weather
