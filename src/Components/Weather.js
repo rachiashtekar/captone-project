@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import Vector2 from "../asset/Vector2.png";
+import Line from "../asset/Line.png"
 
 function Weather() {
   const [Weather, setWeather] = useState(null);
@@ -34,35 +36,60 @@ useEffect(() => {
       style={{
         background: "#101744",
         width: "580px",
-        height: "150PX",
+        height: "180PX",
         // padding: "16px",
         color: "white",
-        marginTop: "10px",
+        marginTop: "30px",
         marginLeft: "10px",
-        borderRadius: "19PX",
+         borderRadius: "33px"
       }}
     >
       <div 
         style={{ height: "50px", width: "578px", background: "#FF4ADE",borderRadius:"33.43px 33.43px 0px 0px",display:"flex",justifyContent: " space-between",
     }}
       >
-        <p style={{marginLeft:"40px",marginTop:"15px",fontSize:"20px",fontWeight:"400"}}>{date}</p>
-        <p style={{marginRight:"50px",marginTop:"15px",fontSize:"20px",fontWeight:"400"}}>{time}</p>
+        <p style={{marginLeft:"40px",marginTop:"10px",fontSize:"30px",fontWeight:"600"}}>{date}</p>
+        <p style={{marginRight:"50px",marginTop:"10px",fontSize:"30px",fontWeight:"600"}}>{time}</p>
       </div>
-      <p>Weather</p>
-      {/* {Weather
+
+      <div style={{display:"flex",justifyContent:"space-around"}}>
+
+      <div className="weather-info">
+      <p style={{height:"50px",width:"50px",marginTop:"20px"}}>< img src={Vector2} style={{height:"50px"}}/></p>
+        {/* {Weather
         ? Weather.timelines.daily[0].values.temperatureAvg < 30
           ? "Sunny"
           : "Winter"
-        : "Loading..."}
-      <p>Temprature</p>
-      {Weather ? Weather.timelines.daily[0].values.temperatureAvg : "Loading"}
+        : "Loading..."}  */}
 
+      </div>
+      <div style={{height:"10px",marginTop:"20px"}}>
+        <img src={Line}/>
+      </div>
+     
+     <div>
+     <p>Temprature</p>
+      {/* {Weather ? Weather.timelines.daily[0].values.temperatureAvg: "Loading"}  */}
+    
+
+
+     </div>
+     
+      <div style={{height:"10px",marginTop:"20px"}}>
+        <img src={Line}/>
+      </div>
+     
+      
+      <div className="humidity-wind">
       <p>Humidity</p>
-      {Weather ? Weather.timelines.daily[0].values.humidityAvg : "Loading"}
+      {/* {Weather ? Weather.timelines.daily[0].values.humidityAvg : "Loading"} */}
 
       <p>Wind</p>
-      {Weather ? Weather.timelines.daily[0].values.windGustAvg : "Loading"} */}
+      {/* {Weather ? Weather.timelines.daily[0].values.windGustAvg : "Loading"}  */}
+
+      </div>
+      </div>
+     
     </div>
   );
 }
