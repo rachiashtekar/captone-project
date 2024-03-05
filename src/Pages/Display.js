@@ -14,7 +14,7 @@ function Display() {
       <UserInfo/>
       <Notes/>
       <Weather/>
-      {/* <News/> */}
+      <News/>
     </div>
   );
 }
