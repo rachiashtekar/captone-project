@@ -57,6 +57,7 @@ export default function Timer() {
           </CountdownCircleTimer>
         </div>
         <div style={{ display: "flex" }}>
+
           <div
             style={{
               display: "flex",
@@ -74,6 +75,12 @@ export default function Timer() {
             >
               <img src={Timerimg} />
             </button>
+            <div style={{ marginLeft: "38px" }}>
+              <div style={{ color: "white", fontSize: "30px" }}>
+                {seconds % 60}
+              </div>
+            </div>
+
             <button
               style={{ background: "none", border: "none" }}
               onClick={() => {
@@ -92,7 +99,7 @@ export default function Timer() {
               color: "white",
               position: "absolute",
               left: "550px",
-              top: "520px",
+              top: "540px",
             }}
           >
             :
@@ -115,6 +122,11 @@ export default function Timer() {
             >
               <img src={Timerimg} />
             </button>
+            <div style={{marginLeft: "37px" }}>
+            <div style={{ color: "white", fontSize: "30px" }}>
+              {Math.floor((seconds % 3600) / 60)}
+            </div>
+            </div>
             <button
               style={{ background: "none", border: "none" }}
               onClick={() => {
@@ -133,7 +145,7 @@ export default function Timer() {
               color: "white",
               position: "absolute",
               left: "750px",
-              top: "520px",
+              top: "540px",
             }}
           >
             :
@@ -156,6 +168,11 @@ export default function Timer() {
             >
               <img src={Timerimg} />
             </button>
+            <div style={{marginLeft: "26px"}}>
+            <div style={{ color: "white", fontSize: "30px" }}>
+                  {Math.floor(seconds / 3600)} 
+                </div> 
+                </div>
             <button
               style={{ background: "none", border: "none" }}
               onClick={() => {
@@ -167,8 +184,11 @@ export default function Timer() {
               <img src={Timerimg2} />
             </button>
           </div>
+
+         
         </div>
       </div>
+
       <div style={{ position: "absolute", top: "650px", left: "450px" }}>
         <button
           style={{
@@ -184,7 +204,6 @@ export default function Timer() {
           <span style={{ color: "white", fontSize: "20px" }}>Start</span>
         </button>
       </div>
-      {/* </div>  */}
     </div>
   );
 }
