@@ -1,7 +1,7 @@
 
 
 
-# // -------------------imp information----------------------------------//
+# // -----------imp information---------------------//
 #  command 1.  npm i react-router-dom
 import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 
@@ -14,7 +14,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
       </Routes>
     </BrowserRouter>
 
-  # ---------------------------------------------------------------------------------------------
+  # ---------------------------------------------------------
 
   #                          About MovieBox componenet
 
@@ -55,8 +55,8 @@ localStorage.getItem("userInfo") retrieves the stored string value.
 
 5. JSON.parse is then used to parse the JSON string and convert it into a JavaScript object.
 
-# -----------------------------------------------About useEffect and Fetch function-------------------------------------
-  # ----------------------------------Weather part----------------------------------------------------
+# -------------------------About useEffect and Fetch function-------------------------------
+  # -------------------------------Weather part----------------------------------------
 
 1. The reason for using useEffect with fetch is to ensure that the data fetching and related operations occur at the appropriate time in the component's lifecycle. By placing it in a useEffect with an empty dependency array ([]), you can make sure that the fetch operation only happens once when the component mounts.
 
@@ -78,7 +78,7 @@ localStorage.getItem("userInfo") retrieves the stored string value.
 
 # <!-- #---------------------------------------------------------------------------------------------------->
 
-# -----------------------------------------------News components-----------------------------------
+# ---------------------------------News components-----------------------------------
 {News.news[0].text.slice(0, 350)}...
 News.news[0].text:
 
@@ -94,4 +94,16 @@ This means it is extracting the first 350 characters of the text property.
 3. The ellipsis (...) at the end indicates that the text is being truncated, and more content follows. It's commonly used to suggest that there is additional content that is not currently displayed.
 
 
- #       <!--------------- ------------------------------------------------------------------------------------------------->
+ #       <!--------------- ----------------------------------------------------------------------->
+
+ # ------------------------Timer Components----------------------------------------
+
+ 1. CountdownCircleTimer is a component from the "react-countdown-circle-timer" library.
+
+
+ 2. <CountdownCircleTimer> is a component from the "react-countdown-circle-timer" library, which is used to create a circular countdown timer.
+
+
+ 3. isPlaying={isPlaying}: This prop controls whether the countdown is actively playing or paused. It is set based on the state variable isPlaying.
+
+ 4. 

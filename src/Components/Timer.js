@@ -4,6 +4,7 @@ import Timerimg from "../asset/Timerimg.png";
 import Timerimg2 from "../asset/Timerimg2.png";
 export default function Timer() {
   const [seconds, setSeconds] = useState(0);
+
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
