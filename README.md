@@ -1,7 +1,7 @@
 
 
 
-# // -----------imp information---------------------//
+#                                             imp information
 #  command 1.  npm i react-router-dom
 import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 
