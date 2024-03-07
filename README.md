@@ -1,7 +1,7 @@
 
 
 
-#                                             imp information
+#                                     -----------      imp information
 #  command 1.  npm i react-router-dom
 import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 
@@ -55,8 +55,8 @@ localStorage.getItem("userInfo") retrieves the stored string value.
 
 5. JSON.parse is then used to parse the JSON string and convert it into a JavaScript object.
 
-# -------------------------About useEffect and Fetch function-------------------------------
-  # -------------------------------Weather part----------------------------------------
+# -----About useEffect and Fetch function-------
+  # --------------Weather part-------------------
 
 1. The reason for using useEffect with fetch is to ensure that the data fetching and related operations occur at the appropriate time in the component's lifecycle. By placing it in a useEffect with an empty dependency array ([]), you can make sure that the fetch operation only happens once when the component mounts.
 
@@ -78,7 +78,7 @@ localStorage.getItem("userInfo") retrieves the stored string value.
 
 # <!-- #---------------------------------------------------------------------------------------------------->
 
-# ---------------------------------News components-----------------------------------
+# ------------News components----------------
 {News.news[0].text.slice(0, 350)}...
 News.news[0].text:
 
@@ -96,7 +96,7 @@ This means it is extracting the first 350 characters of the text property.
 
  #       <!--------------- ----------------------------------------------------------------------->
 
- # ------------------------Timer Components----------------------------------------
+ # ----------Timer Components------------------
 
  1. CountdownCircleTimer is a component from the "react-countdown-circle-timer" library.
 
