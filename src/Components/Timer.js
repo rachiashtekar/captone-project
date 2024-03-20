@@ -2,10 +2,16 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import React, { useState } from "react";
 import Timerimg from "../asset/Timerimg.png";
 import Timerimg2 from "../asset/Timerimg2.png";
+import { useNavigate } from "react-router-dom";
 export default function Timer() {
   const [seconds, setSeconds] = useState(0);
 
   const [isPlaying, setIsPlaying] = useState(false);
+
+  const navigate = useNavigate();
+    const handleClick = () =>{
+    navigate("/Browse");
+    }
 
   return (
     <div>
@@ -205,6 +211,12 @@ export default function Timer() {
           <span style={{ color: "white", fontSize: "20px" }}>Start</span>
         </button>
       </div>
+
+      <div style={{width:"110px" , height:"50px",background: "#148A08", position:"absolute",left:"1200px",top:"600px",borderRadius:"15px" }}>
+        <button style={{color:"white" , border:"none",background:"none",fontSize:"20px", marginTop:"10px",marginLeft:"18px"}}  onClick={handleClick}>Browse</button>
+        </div>
+      
+      
     </div>
   );
 }

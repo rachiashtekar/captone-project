@@ -1,4 +1,8 @@
+import MovieList from "../Components/MovieList";
+
 function Browse() {
-  return <div>Browse Page</div>;
+  return <>
+  <MovieList/>
+  </>;
 }
 export default Browse;
